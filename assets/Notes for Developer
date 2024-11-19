@@ -1,0 +1,10 @@
+引用图片到hydra使用：
+https://raw.githubusercontent.com/[username]/[repository]/[branch]/[path_to_file]
+
+[username]：是你的 GitHub 用户名。
+[repository]：是你的仓库名称。
+[branch]：是你的分支名称，通常是 main 或 master。
+[path_to_file]：是文件相对于仓库根目录的路径。
+
+例如
+https://raw.githubusercontent.com/ZiminYue/FEMINIST-CODING-24-25-Ah-Mi---Zimin/main/assets/images/test.png
