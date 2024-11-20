@@ -1,6 +1,7 @@
-s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/test.png")
-
-shape(30,0.0001,5).color(1,0,0).modulate(src(s0),1).out(o0)
+// s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/test.png")
+// s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/coverTest.jpg")
+s0.initVideo("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/video/videotest2.mp4")
+shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)
 
 // src(o0)
 //  .saturate(1)
