@@ -13,6 +13,12 @@ shape(30,0.0001,5).color(1,0,0).modulate(src(s0),1).out(o0)
 //          .mult(gradient(1)
 //                .saturate(.9)))
 //   .out(o0)
+//↓This has to be here
+// noise(1, .2)
+//   .rotate(2,.5)
+//   .layer(src(o0)
+//   .scrollX(.2))
+//   .out(o1)
 
 shape([4,5,6].fast(0.5).smooth(1),0.000001,[0.2,0.7].smooth(0))
 .color(0.2,0.4,0.3)
