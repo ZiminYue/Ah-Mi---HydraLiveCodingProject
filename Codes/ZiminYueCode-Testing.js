@@ -42,8 +42,3 @@ src(o0)
                .saturate(.9)))
   .out(o0)
 
-noise(1, .2)
-  .rotate(2,.5)
-  .layer(src(o0)
-  .scrollY(.1))
-  .out(o1)
