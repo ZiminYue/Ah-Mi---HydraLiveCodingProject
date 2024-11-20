@@ -27,3 +27,23 @@ noise(1, .2)
   .layer(src(o0)
   .scrollX(.2))
   .out(o1)
+
+
+////I dunno why it becomes like raining gold?!
+src(o0)
+ .saturate(1)
+ .scale(1)
+ .color(1.01,0.9,0.9)
+ .hue(.01)
+ .modulateHue(src(o1).hue(.2).posterize(-5).contrast(.7),2)
+  .layer(src(o1)
+         .luma()
+         .mult(gradient(1)
+               .saturate(.9)))
+  .out(o0)
+
+noise(1, .2)
+  .rotate(2,.5)
+  .layer(src(o0)
+  .scrollY(.1))
+  .out(o1)
