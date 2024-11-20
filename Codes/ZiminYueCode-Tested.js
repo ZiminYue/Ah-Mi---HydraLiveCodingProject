@@ -35,3 +35,17 @@ shape([4,5,6].fast(0.5).smooth(1),0.000001,[0.2,0.7].smooth(0))
 .modulate(voronoi(10,2,2))
 .out()
 
+osc(3, 0.01, 0.4)
+.color(1.2,1.2,1.3)
+// .saturate(0.4)
+// .modulateRepeat(osc(2),1, 2, 4, 3)
+// .modulateKaleid(osc(12,0.05,0),1)
+// .luma (0.4)
+.rotate(4, 0.1,0)
+// .modulate(o0, () => mouse.y *0.0002 )
+.scale(1).diff(o1)
+.out(o0)
+
+s0.initImage("https://pbs.twimg.com/card_img/1849384198307446785/tFvMXLiC?format=jpg&name=small")
+voronoi(5,3,5).color(1,0,3).kaleid(15).modulate(src(s0).scale(1,1.2,1,0.5,0),1).modulate(noise(10),()=>a.fft[0]).out(o0)
+
