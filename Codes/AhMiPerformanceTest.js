@@ -67,7 +67,7 @@ shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0);
 //  // .scale(1).diff(o1)
 //  // .out(o0)
 
-
+////Ripple in Lugu Lake
 voronoi(10,3,5)
   .color(0.5,1,2)		
   .kaleid(15)
@@ -75,6 +75,7 @@ voronoi(10,3,5)
   .scale(1,1.2,1,0.5,0),1)
   .modulate(noise(3.5),()=>a.fft[0]).out(o0)
 
+////Mother starts family
 // voronoi(10,3,5)
 //   .color([5,2,1].smooth(1),1,0)		
 //   .kaleid(15)
@@ -82,7 +83,8 @@ voronoi(10,3,5)
 //   .scale(1,1.2,1,0.5,0),1)
 //   .out(o0) line (such as "osc().out()"), and press CTRL+shift+enter
 
-
+////Celebrating Fire
+shape(3,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*2 ).brightness( () => Math.sin(time*3) ).color(5,1,0.01).out(o0)
 
 //jungle
 voronoi(1,0.3,0.2).shift(8)
