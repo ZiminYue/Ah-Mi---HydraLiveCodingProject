@@ -84,6 +84,15 @@ shape(200,0.5,1.5)
 .scale(0.9)
 .out()
 
+////Trying to get rid of video in s01
+// s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/test.png")
+   s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/coverTest.jpg")
+voronoi(10,3,5)
+  .color([5,2,1].smooth(1),1,0)
+ .kaleid(15)
+.modulate(src(s0)
+ .scale(1,1.2,1,0.5,0),1)
+
 
 ////I dunno why it becomes like raining gold?!
 src(o0)
