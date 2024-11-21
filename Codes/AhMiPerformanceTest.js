@@ -68,9 +68,16 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)
 //  // .out(o0)
 
 
+voronoi(10,3,5)
+  .color(0.5,1,2)		
+  .kaleid(15)
+  .modulate(src(s0)
+  .scale(1,1.2,1,0.5,0),1)
+  .modulate(noise(3.5),()=>a.fft[0]).out(o0)
+
 // voronoi(10,3,5)
-//   .color([5, 2, 1].smooth(1),1,0)
+//   .color([5,2,1].smooth(1),1,0)		
 //   .kaleid(15)
 //   .modulate(src(s0)
 //   .scale(1,1.2,1,0.5,0),1)
-//   .modulate(noise(10),()=>a.fft[0]).out(o0)
+//   .out(o0) line (such as "osc().out()"), and press CTRL+shift+enter
