@@ -81,3 +81,16 @@ voronoi(10,3,5)
 //   .modulate(src(s0)
 //   .scale(1,1.2,1,0.5,0),1)
 //   .out(o0) line (such as "osc().out()"), and press CTRL+shift+enter
+
+
+
+//jungle
+voronoi(1,0.3,0.2).shift(8)
+.modulatePixelate(voronoi(4,0.2),32,2)
+.scale(()=>1+(Math.sin(time*2.5)*0.05))
+.diff(voronoi(3).shift(0.01))
+.diff(osc(3,0.15,3).rotate())
+.color(0.3,5,0.5)
+.brightness(0.2).contrast(0.8).saturate(0.8)
+	.out()
+speed = 1
