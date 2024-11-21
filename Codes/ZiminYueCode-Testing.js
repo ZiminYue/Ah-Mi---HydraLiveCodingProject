@@ -93,6 +93,8 @@ voronoi(10,3,5)
 .modulate(src(s0)
  .scale(1,1.2,1,0.5,0),1)
 
+shape(3,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*2 ).brightness( () => Math.sin(time*3) ).color(5,1,0.01).out(o0)
+
 
 ////I dunno why it becomes like raining gold?!
 src(o0)
