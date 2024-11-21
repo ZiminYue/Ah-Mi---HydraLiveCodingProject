@@ -87,12 +87,12 @@ voronoi(10,3,5)
 shape(3,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*2 ).brightness( () => Math.sin(time*3) ).color(5,1,0.01).out(o0)
 
 //jungle
-voronoi(1,0.3,0.2).shift(8)
-.modulatePixelate(voronoi(4,0.2),32,2)
-.scale(()=>1+(Math.sin(time*2.5)*0.05))
-.diff(voronoi(3).shift(0.01))
+voronoi(1,0.3,0.2).shift(8).kaleid(5)
+.modulatePixelate(voronoi(10,0.2),45,2)
+.scale(()=>1+(Math.sin(time*2.5)*0.025))
 .diff(osc(3,0.15,3).rotate())
 .color(0.3,5,0.5)
-.brightness(0.2).contrast(0.8).saturate(0.8)
+.diff(voronoi(3,1).shift(0.1).kaleid(10))
+.brightness(0.01).contrast(0.8).saturate(0.8)
 	.out()
-speed = 1
+speed = 2.5
