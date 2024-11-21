@@ -12,3 +12,14 @@ voronoi(33,3,30).rotate(3,0.3,0).modulateScale(o2,0.3).color(-3,3,0).brightness(
 shape(30,0.3,1).invert(({time})=>Math.sin(time)*3).out(o2)
 
 render(o3)
+
+
+fixed jungle
+voronoi(1,0.3,0.2).shift(8)
+.modulatePixelate(voronoi(4,0.2),32,2)
+.scale(()=>1+(Math.sin(time*2.5)*0.05))
+.diff(voronoi(3).shift(0.5))
+.diff(osc(3,0.15,3).rotate())
+.brightness(0.23).contrast(1.2).saturate(1)
+	.out()
+speed = 0.8
