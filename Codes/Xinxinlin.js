@@ -23,3 +23,14 @@ voronoi(1,0.3,0.2).shift(8)
 .brightness(0.23).contrast(1.2).saturate(1)
 	.out()
 speed = 0.8
+
+
+改后：蓝色水波纹背景绿色？
+shape(99, 0.1, 0.5) // 生成接近圆形的基本波纹形状
+  .scale(({time}) => 1 + Math.sin(time * 0.6) * 0.2) // 动态缩放模拟波纹扩散效果
+  .modulate(osc(10, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+  .add(noise(3, 0.1,2))
+  .color(0, 0, 8)
+  .brightness(0.2) // 提高亮度，使波纹更加清晰
+  .contrast(0.2) // 增强对比度，使水波纹更明显
+  .out(o0);
