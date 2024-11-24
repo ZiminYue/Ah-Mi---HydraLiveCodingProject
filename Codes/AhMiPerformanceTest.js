@@ -96,3 +96,23 @@ voronoi(1,0.3,0.2).shift(8).kaleid(5)
 .brightness(0.01).contrast(0.8).saturate(0.8)
 	.out()
 speed = 2.5
+
+
+shape(99, 0.1, 0.1) // 生成接近圆形的基本波纹形状
+  .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) // 动态缩放模拟波纹扩散效果
+  .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+  .add(noise(2, 0.1,2))
+  .color(0, 1, 2)
+  .brightness(0.05) // 提高亮度，使波纹更加清晰
+  .contrast(2) // 增强对比度，使水波纹更明显
+  .out(o1);
+
+osc(6, 0.1, 0.6) // 生成接近圆形的基本波纹形状
+  .scale(({time}) => 0.8 + Math.sin(time * 1) * 0.1) // 动态缩放模拟波纹扩散效果
+  .modulate(osc(1, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+  .add(noise(2, 0.1,2))
+  .color(0, 1, 2)
+.add(o1)
+  .out(o0);
+speed=3
+
