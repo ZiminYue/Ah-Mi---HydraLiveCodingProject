@@ -97,7 +97,7 @@ voronoi(1,0.3,0.2).shift(8).kaleid(5)
 	.out()
 speed = 2.5
 
-
+//Last peace mother lake
 shape(99, 0.1, 0.1) // 生成接近圆形的基本波纹形状
   .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) // 动态缩放模拟波纹扩散效果
   .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
