@@ -1,0 +1,43 @@
+你的代码里面有两段是基于别人的代码改的，批注的时候最好说明一下这段代码是哪里不一样（加了什么效果，比如丛林我记得是加了万花筒）以及你在表演的时候是改了什么数值做了什么东西
+我把电子风暴和丛林的源代码贴这里，你对比一下把不一样的地方找出来批批（ChatGPT可以帮你找但是它做的分析不一定对）↓
+
+数据过载的大风暴
+// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+//Pixelscape
+//Marianne Teixido
+//https://github.com/MarianneTeixido
+
+src(o0)
+ .saturate(1.01)
+ .scale(.999)
+ .color(1.01,1.01,1.01)
+ .hue(.01)
+ .modulateHue(src(o1).hue(.3).posterize(-1).contrast(.7),2)
+  .layer(src(o1)
+         .luma()
+         .mult(gradient(1)
+               .saturate(.9)))
+  .out(o0)
+
+noise(1, .2)
+  .rotate(2,.5)
+  .layer(src(o0)
+  .scrollX(.2))
+  .out(o1)
+
+
+
+花里胡哨的丛林
+// licensed with CC BY-NC-SA 4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/
+//tropical juice
+//by Ritchse
+//instagram.com/ritchse
+ 
+voronoi(2,0.3,0.2).shift(0.5)
+.modulatePixelate(voronoi(4,0.2),32,2)
+.scale(()=>1+(Math.sin(time*2.5)*0.05))
+.diff(voronoi(3).shift(0.6))
+.diff(osc(2,0.15,1.1).rotate())
+.brightness(0.1).contrast(1.2).saturate(1.2)
+	.out()
+speed = 0.8
