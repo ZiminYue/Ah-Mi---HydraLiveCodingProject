@@ -17,7 +17,7 @@
 
 // The Title
 // Section 1 - World of Increasing Noise
-// See Xinxin's work
+// [See Xinxin's work]
 
 
 // Section 2 - Apocalyptic Chaotic Thunderclouds
@@ -95,4 +95,4 @@
 // Section 6 - The Fire-Fueled Flourishing of Culture
 // Section 7 - Eco-friendly Development
 // Section 8 - Endless Harmony Flows with the Mother Lake
-// See Xinxin's work
+// [See Xinxin's work]
