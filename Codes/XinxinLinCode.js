@@ -32,11 +32,12 @@ shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0)
 
 
 //This part is based on Marianne Teixido's "Pixelscape"
-src(o0)
+// Here was based on the last .out(o0) output to make a new noise effect, due to show the effect of collapse of the Internet's big data overload.
  .saturate(1)
  .scale(1)
  .color(1.01,1,1.01)
  .hue(.01)
+ // Here I adjusted the .hue() and .posterize() to change the color hue and increase the number of color layers, make the visual effect of noise is made more intense.
  .modulateHue(src(o1).hue(0.9).posterize(-5).contrast(.7),2)
   .layer(src(o1)
          .luma()
