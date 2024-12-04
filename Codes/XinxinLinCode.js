@@ -77,25 +77,34 @@ voronoi(3,0.3,0.2).shift(5).kaleid(5)
 // Here I decreased the .brightness(), .contrast() and .saturate(), to make the hole effect softer.
 .brightness(0.01).contrast(0.8).saturate(0.8)
 	.out()
-// Here we can adjust the speed of the effect with the music
+// Here we can adjust the speed of the effect with the music rhythm.
 speed = 3
 
 
 // Section 8 - Endless Harmony Flows with the Mother Lake
-
-shape(99, 0.1, 0.1) // 生成接近圆形的基本波纹形状
-  .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) // 动态缩放模拟波纹扩散效果
-  .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+// Make a pattern that is close to circular and has soft edges.
+shape(99, 0.1, 0.1) 
+// Scale the graph according to the time period
+  .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) 
+// Increase the randomness of the graphical fluctuations
+  .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) 
+// add the noise on the pattern，make the image richer.
   .add(noise(2, 0.1,2))
+// make a blue hue.
   .color(0, 1, 2)
-  .brightness(0.05) // 提高亮度，使波纹更加清晰
-  .contrast(2) // 增强对比度，使水波纹更明显
+// add the .brightness() and .contrast() to add a richer gradation to the blue tones.
+  .brightness(0.05) .contrast(2) 
+// take the result into .out(), for further layer stacking.
   .out(o1);
-osc(6, 0.1, 0.6) // 生成接近圆形的基本波纹形状
-  .scale(({time}) => 0.8 + Math.sin(time * 1) * 0.1) // 动态缩放模拟波纹扩散效果
-  .modulate(osc(1, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
-  .add(noise(2, 0.1,2))
+// Here use .osc() to generate a gentle ripple pattern.
+osc(6, 0.1, 0.6) 
+// The Math.sin can periodically changes the shape of the figure.
+  .scale(({time}) => 0.8 + Math.sin(time * 1) * 0.1) 
+// Continue to stack and adjust the dynamic effects of the graphics.
+  .modulate(osc(1, 0.1).rotate(0, 0.1), 0.3) .add(noise(2, 0.1,2))
+// Provides a cool blue hue to the image.
   .color(0, 1, 2)
 .add(o1)
   .out(o0);
+// Control the speed of the screen changes.
 speed=3
