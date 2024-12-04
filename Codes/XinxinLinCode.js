@@ -17,10 +17,13 @@
 
 
 // The cover of the project'AH MI'
-//
-
+//Here I have placed a animated video I made myself used AI and AE software, which aims to introduce the ethnic background of the Mosuo people.
 s0.initVideo("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/video/videotest3.mp4")
-shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)
+// here I 
+shape(30,0.0001,5)
+	.color(3,1,0)
+	.modulate(src(s0),1)
+	.out(o0)
 
 // Section 1 - World of Increasing Noise
 
