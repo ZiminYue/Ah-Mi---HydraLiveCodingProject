@@ -54,8 +54,17 @@ shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0)
 
 
 // Section 6 - The Fire-Fueled Flourishing of Culture
-
-shape(5,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*1 ).brightness( () => Math.sin(time*2) ).color(5,1,0.01).out(o0)
+// use .shape() to make a roughly fuzzy shape
+shape(5,0.1,1)
+// here use the .noise() to enriche the graphical interface.
+// and the graph can change with the sound by a.fft[0]
+// The screen can be dynamically rotated according to the time by use the .rotate(() => time % 360 * 1)
+.modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*1 )
+// Dynamically adjusts screen brightness
+.brightness( () => Math.sin(time*2) )
+// use the .color() to make a color of flame.
+.color(5,1,0.01)
+.out(o0)
 
 
 // Section 7 - Eco-friendly Development
