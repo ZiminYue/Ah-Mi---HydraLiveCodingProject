@@ -33,7 +33,8 @@ shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0)
 
 //This part is based on Marianne Teixido's "Pixelscape"
 // Here was based on the last .out(o0) output to make a new noise effect, due to show the effect of collapse of the Internet's big data overload.
- .saturate(1)
+ src(o0)
+.saturate(1)
  .scale(1)
  .color(1.01,1,1.01)
  .hue(.01)
