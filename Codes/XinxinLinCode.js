@@ -16,7 +16,8 @@
 //---------------------------------------------------------------------------------------
 
 
-// The Title
+// The cover of the project'AH MI'
+//
 
 s0.initVideo("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/video/videotest3.mp4")
 shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)
