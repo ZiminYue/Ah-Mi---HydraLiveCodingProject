@@ -65,13 +65,19 @@ shape(5,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*1 ).bright
 // Here I adjusted the .voronoi() and .shift()，to make the graph become more dense and dynamic.
 // I add the .kaleid() to make the graph vary with center-symmetry.
 voronoi(3,0.3,0.2).shift(5).kaleid(5)
+//Here I add the parameter of voronoi from '4' to '10', '32' to '45', to make the pixelation of the graphics larger and the texture denser. 
 .modulatePixelate(voronoi(10,0.2),45,2)
+// I adjust the time rate of the .scale(), make dynamic changes more subtle.
 .scale(()=>1+(Math.sin(time*2.5)*0.025))
 .diff(osc(3,0.15,3).rotate())
+// Here I add the .color(), to fill the frame with a natural atmosphere.
 .color(0.3,5,0.5)
+// Here I adjust the .voronoi() and .shift(), also add the .kaleid, to make the texture more complex.
 .diff(voronoi(3,1).shift(0.1).kaleid(10))
+// Here I decreased the .brightness(), .contrast() and .saturate(), to make the hole effect softer.
 .brightness(0.01).contrast(0.8).saturate(0.8)
 	.out()
+// Here we can adjust the speed of the effect with the music
 speed = 3
 
 
