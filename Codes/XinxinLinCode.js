@@ -61,6 +61,9 @@ shape(5,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*1 ).bright
 // Section 7 - Eco-friendly Development
 
 //This section is based on Ritchse Teixido's "tropical juice"
+// In this section, we want to make a nature and jungle visual effect.
+// Here I adjusted the .voronoi() and .shift()，to make the graph become more dense and dynamic.
+// I add the .kaleid() to make the graph vary with center-symmetry.
 voronoi(3,0.3,0.2).shift(5).kaleid(5)
 .modulatePixelate(voronoi(10,0.2),45,2)
 .scale(()=>1+(Math.sin(time*2.5)*0.025))
