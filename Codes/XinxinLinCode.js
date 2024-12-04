@@ -45,12 +45,6 @@ shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0)
                .saturate(.9)))
   .out(o0)
 
-noise(1, .2)
-  .rotate(2,.5)
-  .layer(src(o0)
-  .scrollX(.2))
-  .out(o1) //bgm纯音乐的时候解锁下一段，播完了就运行下一段
-
 
 // Section 2 - Apocalyptic Chaotic Thunderclouds
 // Section 3 - The Collapse and Rebirth of the Universe
