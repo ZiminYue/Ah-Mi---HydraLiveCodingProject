@@ -1,6 +1,6 @@
 // Ah Mi
 
-// Xinxin Lin (你的学生id)
+// Xinxin Lin (24009560)
 
 
 //---------------------------------------------------------------------------------------
@@ -19,14 +19,14 @@
 // The cover of the project'AH MI'
 //Here I have placed a animated video I made myself used AI and AE software, which aims to introduce the ethnic background of the Mosuo people.
 s0.initVideo("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/video/videotest3.mp4")
-// here I 
+// Here I use the.color() to make an orange hue, due to represent the passionate national characteristic of Mosuo.
 shape(30,0.0001,5)
 	.color(3,1,0)
 	.modulate(src(s0),1)
 	.out(o0)
 
 // Section 1 - World of Increasing Noise
-
+// Here I have designed a black and white text poster to introduce the theme of the Internet.
 s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/COVER2.jpg");
 shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0)
 
