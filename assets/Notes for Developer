@@ -1,12 +1,13 @@
-引用图片到hydra使用：
+To insert image/video in Hydra, use:
 https://raw.githubusercontent.com/[username]/[repository]/[branch]/[path_to_file]
 
-[username]：是你的 GitHub 用户名。
-[repository]：是你的仓库名称。
-[branch]：是你的分支名称，通常是 main 或 master。
-[path_to_file]：是文件相对于仓库根目录的路径。
+[username]: Your GitHub username.
+[repository]: Your repository name.
+[branch]: Your branch name, usually main or master.
+[path_to_file]: The path to the file relative to the repository root.
 
-例如
+For example,
 https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/test.png
 
-注意：必须公开此repository否则不能使用网址！
+Note: This repository must be public, otherwise the URL cannot be used!
+
