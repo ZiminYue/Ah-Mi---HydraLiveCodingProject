@@ -1,13 +1,13 @@
 s0.initVideo("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/video/videotest3.mp4")
-shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主题
+shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//cover-introduce the theme
 
 
 //  s0.initImage("https://raw.githubusercontent.com/ZiminYue/Ah-Mi---HydraLiveCodingProject/main/assets/images/COVER2.jpg");
-// shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0);//互联网咋了（出现人声切下一张）
+// shape(30, 0.0001, 5).color(1, 1, 1).modulate(src(s0), 1).out(o0);//What happened to the Internet? (Move to next part after human voice appears)
 
 
 
-// //噪音风暴
+// //Increasing Noise
 // src(o0)
 //  .saturate(1)
 //  .scale(1)
@@ -24,10 +24,10 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主�
 //   .rotate(2,.5)
 //   .layer(src(o0)
 //   .scrollX(.2))
-//   .out(o1) //bgm纯音乐的时候解锁下一段，播完了就运行下一段
+//   .out(o1) //Uncomment the next section when plain music is playing, and play it after this is finished
 
 
-// //彩色乌云（蠕动的声音）
+// //Chaotic Thunderclouds (gobbling sound)
 // shape([4,5,6].fast(0.5).smooth(1),0.000001,[0.2,0.7].smooth(0))
 // .color(0.5,0.4,0.3)
 // .scrollX(()=>Math.sin(time*0.27))
@@ -49,7 +49,7 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主�
 // .modulate(voronoi(15,2,2))
 // .out()
 
-// //哭完开始-多哭几次
+// //Start after crying (cry several times)
 // shape(30,0.5,0.1).scale(0.08,0.5,1).out(o1)//clean up o1, making a singularity
 // osc(3, 0.1, 0.4)
 // .color(1.2,1.2,1.3)
@@ -73,7 +73,7 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主�
 //  .out(o0)
 
 
-// ////ahmi人声
+// ////Ah-mi calling
 // ////Ripple in Lugu Lake
 // voronoi(10,3,5)
 //   .color(0.5,1,2)		
@@ -82,18 +82,18 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主�
 
 
 
-// ////Mother starts family 鼓声等暗号-敲鼓解锁下一段
+// ////Mother starts family //Drum beat (Waiting for the signal, while uncommenting the next section)
 // voronoi(15,3,5)
 //   .color([5,2,1].smooth(10),1,0)		
 //   .kaleid(20)
 //   .out(o0)
 
 
-// ////Celebrating Fire 滋火+唱歌-解锁
+// ////Celebrating Fire //Fire sizzles + people sing (Uncomment the next part)
 // shape(5,0.1,1).modulate(noise(7),()=>a.fft[0]).rotate( () => time%360*1 ).brightness( () => Math.sin(time*2) ).color(5,1,0.01).out(o0)
 
 
-// //jungle -特别慢的鸟叫 解锁下一段
+// //Jungle //Uncomment the next part when hear a very slow bird tweet
 // voronoi(3,0.3,0.2).shift(5).kaleid(5)
 // .modulatePixelate(voronoi(10,0.2),45,2)
 // .scale(()=>1+(Math.sin(time*2.5)*0.025))
@@ -107,17 +107,17 @@ shape(30,0.0001,5).color(3,1,0).modulate(src(s0),1).out(o0)//pp封面-介绍主�
 
 
 // //Last peace mother lake
-// shape(99, 0.1, 0.1) // 生成接近圆形的基本波纹形状
-//   .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) // 动态缩放模拟波纹扩散效果
-//   .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+// shape(99, 0.1, 0.1) // Generate a basic ripple shape close to a circle
+//   .scale(({time}) => 1 + Math.sin(time * 0.1) * 0.1) // Dynamically scale to simulate the ripple diffusion effect
+//   .modulate(osc(4, 0.1).rotate(0, 0.1), 0.3) // Modulate the shape edge to increase the randomness of the fluctuation
 //   .add(noise(2, 0.1,2))
 //   .color(0, 1, 2)
-//   .brightness(0.05) // 提高亮度，使波纹更加清晰
-//   .contrast(2) // 增强对比度，使水波纹更明显
+//   .brightness(0.05)
+//   .contrast(2) 
 //   .out(o1);
-// osc(6, 0.1, 0.6) // 生成接近圆形的基本波纹形状
-//   .scale(({time}) => 0.8 + Math.sin(time * 1) * 0.1) // 动态缩放模拟波纹扩散效果
-//   .modulate(osc(1, 0.1).rotate(0, 0.1), 0.3) // 调制形状边缘，增加波动的随机性
+// osc(6, 0.1, 0.6) 
+//   .scale(({time}) => 0.8 + Math.sin(time * 1) * 0.1) 
+//   .modulate(osc(1, 0.1).rotate(0, 0.1), 0.3) 
 //   .add(noise(2, 0.1,2))
 //   .color(0, 1, 2)
 // .add(o1)
